@@ -12,7 +12,8 @@ class LoginView extends StatefulWidget {
 }
 
 class LoginState extends State<LoginView> {
-  var data =  LoginViewModel();
+  var data = LoginViewModel();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,42 +26,44 @@ class LoginState extends State<LoginView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('${data.getCounter()}'),
-              ElevatedButton(
-                  onPressed: (){
-                    context.go("post");
-                    setState(() {
-                      //data.inc();
-                    });
-                  },
-                  child: const Icon(Icons.add)
+              const Padding(
+                padding:
+                    EdgeInsets.only(left: 15, right: 15, top: 40, bottom: 0),
+                child: Image(
+                  height: 100,
+                  width: 100,
+                  image: AssetImage('lib/images/png-logo-bird-twitter-image-2.png'),
+                ),
               ),
-              /*const Padding(
-                padding: EdgeInsets.only(left: 15,right: 15,top: 30),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, right: 15, top: 30),
                 child: TextField(
                   obscureText: false,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
+                    border: UnderlineInputBorder(),
                     labelText: 'User name',
                   ),
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.only(left: 15,right: 15,top: 15,bottom: 30),
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                    ),
+                padding:
+                    EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 30),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    labelText: 'Password',
                   ),
+                ),
               ),
               ElevatedButton(
                 onPressed: () {
-                  context.go('/home');
+                  context.go('/post');
                 },
-                child: const Text('go to home Scene'),
-              )*/
+                child: const Text('Login'),
+              ),
+              TextButton(
+                  onPressed: () {}, child: const Text("you don't have account"))
             ],
           ),
         ),

@@ -1,16 +1,10 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
-class DetailsView extends StatefulWidget {
-  const DetailsView({super.key});
+class DetailsView extends StatelessWidget {
+  final String id;
+  const DetailsView({super.key, required this.id});
 
-  @override
-  State<StatefulWidget> createState() {
-    return DetailsState();
-  }
-}
-
-class DetailsState extends State<DetailsView> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +17,7 @@ class DetailsState extends State<DetailsView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Home Scene'),
+              Text("the Post Id is $id"),
               TextButton(
                 onPressed: () {
                   context.go("/login");
@@ -37,3 +31,5 @@ class DetailsState extends State<DetailsView> {
     );
   }
 }
+
+

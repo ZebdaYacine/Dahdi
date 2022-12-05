@@ -7,6 +7,8 @@ class PostViewModel {
 
   get id => postModel?.id;
   get userId => postModel?.userId;
-  get title => postModel?.title?.toUpperCase();
+  get title => postModel?.title;
   get body => postModel?.body;
+
+
 }

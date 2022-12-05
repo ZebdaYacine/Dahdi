@@ -1,13 +1,15 @@
 import 'package:dahdi/model/PostModel.dart';
 import 'package:dahdi/repositoy/posts/PostsRepository.dart';
 import 'package:dahdi/viewModel/PostViewModel.dart';
+import 'package:flutter/material.dart';
 
-class PostsViewModel{
+class PostsViewModel {
   final title = "All Posts";
   PostsRepository? postsRepository;
-  PostsViewModel({this.postsRepository});
-  List<PostViewModel> listVm=[];
 
+  PostsViewModel({this.postsRepository});
+
+  List<PostViewModel> listVm = [];
 
   Future<List<PostViewModel>> fetchAllPosts() async {
     List<PostModel> list = await postsRepository!.getAllPosts();
@@ -22,7 +24,4 @@ class PostsViewModel{
     List<PostModel> list = await postsRepository!.getPostById(id);
     return list.map((e) => PostViewModel(postModel: e)).toList();
   }
-
-
-
 }
