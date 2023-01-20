@@ -1,5 +1,6 @@
-import '../model/PostModel.dart';
 
+
+import 'package:dahdi/domain/model/PostModel.dart';
 
 class Mapping{
 

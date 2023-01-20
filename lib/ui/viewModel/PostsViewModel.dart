@@ -1,6 +1,6 @@
-import 'package:dahdi/model/PostModel.dart';
-import 'package:dahdi/repositoy/posts/PostsRepository.dart';
-import 'package:dahdi/viewModel/PostViewModel.dart';
+import 'package:dahdi/domain/model/PostModel.dart';
+import 'package:dahdi/domain/repositoy/Repository.dart';
+import 'package:dahdi/ui/viewModel/PostViewModel.dart';
 import 'package:flutter/material.dart';
 
 class PostsViewModel {

@@ -1,4 +1,4 @@
-import 'package:dahdi/model/PostModel.dart';
+import 'package:dahdi/domain/model/PostModel.dart';
 
 abstract class PostsRepository{
 

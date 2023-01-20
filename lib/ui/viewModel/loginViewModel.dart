@@ -1,6 +1,6 @@
 
 
-import 'package:dahdi/model/LoginModel.dart';
+import 'package:dahdi/domain/model/LoginModel.dart';
 
 class LoginViewModel{
 

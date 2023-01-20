@@ -2,15 +2,13 @@
 
 import 'dart:collection';
 
-import 'package:dahdi/mapper/Mapping.dart';
-import 'package:dahdi/model/PostModel.dart';
-import 'package:dahdi/repositoy/posts/PostsRepository.dart';
+import 'package:dahdi/data/mapper/Mapping.dart';
+import 'package:dahdi/domain/model/PostModel.dart';
+import 'package:dahdi/domain/repositoy/Repository.dart';
 import 'package:dio/dio.dart';
 
 class PostsAPI extends PostsRepository{
-
   final  baseUrl="https://jsonplaceholder.typicode.com/posts";
-
   @override
   Future<List<PostModel>> getAllPosts() async {
     List<PostModel> allPosts=[] ;
@@ -24,7 +22,6 @@ class PostsAPI extends PostsRepository{
     }
     return allPosts;
   }
-
   @override
   Future<List<PostModel>> getPostById(int id) async{
     List<PostModel> allPosts=[] ;
@@ -38,5 +35,4 @@ class PostsAPI extends PostsRepository{
     }
     return allPosts;
   }
-
 }

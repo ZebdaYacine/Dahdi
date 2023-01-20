@@ -1,12 +1,9 @@
-import 'package:dahdi/repositoy/posts/PostsAPI.dart';
-import 'package:dahdi/viewModel/PostsViewModel.dart';
+import 'package:dahdi/data/remote/PostsAPI.dart';
+import 'package:dahdi/ui/viewModel/PostViewModel.dart';
+import 'package:dahdi/ui/viewModel/PostsViewModel.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutterx_live_data/flutterx_live_data.dart';
 import 'package:go_router/go_router.dart';
-import 'package:grouped_list/grouped_list.dart';
 
-import '../viewModel/PostViewModel.dart';
 
 class PostsView extends StatefulWidget {
   const PostsView({super.key});
@@ -25,7 +22,7 @@ class PostsStat extends State<PostsView> {
   @override
   void initState() {
     super.initState();
-    useFuture = data.fetchAllPosts() as Future<List<PostViewModel>>;
+    useFuture = data.fetchAllPosts();
   }
 
 
@@ -55,11 +52,10 @@ class PostsStat extends State<PostsView> {
                 onChanged: (text) {
                   setState(() {
                     if (text.isNotEmpty) {
-                      useFuture = data.fetchPostById(int.parse(text))
-                      as Future<List<PostViewModel>>;
+                      useFuture = data.fetchPostById(int.parse(text));
                     } else {
                       useFuture =
-                      data.fetchAllPosts() as Future<List<PostViewModel>>;
+                      data.fetchAllPosts();
                     }
                   });
                 },
@@ -110,7 +106,8 @@ class PostsStat extends State<PostsView> {
                         },
                       );
                     }
-                  }),)
+                  }),
+              )
           )
         ]),
       ),

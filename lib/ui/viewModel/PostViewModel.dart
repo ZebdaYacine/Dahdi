@@ -1,5 +1,5 @@
+import 'package:dahdi/domain/model/PostModel.dart';
 
-import '../model/PostModel.dart';
 
 class PostViewModel {
   PostModel? postModel;

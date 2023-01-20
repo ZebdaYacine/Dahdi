@@ -1,4 +1,4 @@
-import 'package:dahdi/viewModel/loginViewModel.dart';
+import 'package:dahdi/ui/viewModel/loginViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,7 +32,7 @@ class LoginState extends State<LoginView> {
                 child: Image(
                   height: 100,
                   width: 100,
-                  image: AssetImage('lib/images/png-logo-bird-twitter-image-2.png'),
+                  image: AssetImage('lib/ui/images/png-logo-bird-twitter-image-2.png'),
                 ),
               ),
               const Padding(

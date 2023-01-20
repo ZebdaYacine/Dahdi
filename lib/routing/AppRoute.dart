@@ -1,8 +1,7 @@
-import 'package:dahdi/views/PostsView.dart';
+import 'package:dahdi/ui/views/DetailsView.dart';
+import 'package:dahdi/ui/views/LoginView.dart';
+import 'package:dahdi/ui/views/PostsView.dart';
 import 'package:go_router/go_router.dart';
-
-import '../views/DetailsView.dart';
-import '../views/LoginView.dart';
 
 class AppRoute {
   final _router = GoRouter(
